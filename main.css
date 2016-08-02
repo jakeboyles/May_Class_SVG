@@ -1,0 +1,83 @@
+body {
+  font-family: sans-serif;
+  background: white;
+  color: white;
+  padding-bottom:900px;
+}
+
+
+
+@keyframes makemespin {
+  0% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(360deg);
+  }
+}
+
+
+@keyframes movethebox {
+  0%{
+
+  }
+
+  20%{
+    transform:translateY(250px);
+  }
+
+  100% {
+    transform:translateY(250px) translateX(400px);
+  }
+
+
+}
+
+
+@keyframes blowupbox {
+  0%{
+
+  }
+
+  20%{
+    transform:translateY(250px);
+  }
+  21%{
+    transform-origin: 147px 115px !important;
+    transform:translateY(250px) scale(1.5);
+  }
+  55% {
+    opacity:1;
+    transform-origin: 147px 115px !important;
+    transform:translateY(250px) scale(3.5);
+  }
+  60% {
+    opacity:0;
+    transform:translateY(250px) scale(9.5);
+  }
+
+
+}
+
+
+#f4_cog {
+    animation-name: makemespin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: 147px 325px;
+    animation-timing-function: linear;
+}
+
+#f4_feature_box {
+  animation-name:movethebox;
+  animation-duration:4s;
+  animation-iteration-count: infinite;
+  transform-origin: 147px 325px;
+  animation-timing-function: linear;
+}
+
+
+.blowupbox {
+  animation-name:blowupbox !important;
+}
+
